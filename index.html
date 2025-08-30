@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlog Vintage - Análise e Desenvolvimento de Sistemas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with vintage newspaper masthead -->
+    <header class="newspaper-header">
+        <div class="header-decoration">
+            <div class="ornament-line"></div>
+        </div>
+        <h1 class="masthead">VLOG VINTAGE</h1>
+        <div class="subtitle">Análise e Desenvolvimento de Sistemas - Turno Manhã</div>
+        <div class="date-line">
+            <span class="date" id="current-date"></span>
+            <span class="edition">Edição Digital</span>
+        </div>
+        <div class="header-decoration">
+            <div class="ornament-line"></div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="vintage-nav">
+        <div class="nav-container">
+            <button class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre o Curso</a></li>
+                <li><a href="#creators" class="nav-link">Criadoras</a></li>
+                <li><a href="#vlog" class="nav-link">Vlog</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="newspaper-columns">
+                <div class="column main-column">
+                    <h2 class="headline fade-in">Bem-vindos ao Nosso Vlog Digital</h2>
+                    <div class="byline">Por: As Estudantes de ADS - Turno Manhã</div>
+                    <p class="lead-paragraph slide-up">
+                        Mergulhe em nossa jornada acadêmica através deste vlog inspirado nos clássicos jornais vintage. 
+                        Aqui documentamos nossa experiência no curso de Análise e Desenvolvimento de Sistemas, 
+                        compartilhando conhecimentos, descobertas e momentos especiais da nossa formação.
+                    </p>
+                    <div class="article-meta">
+                        <span class="meta-item"><i class="fas fa-clock"></i> Atualizado diariamente</span>
+                        <span class="meta-item"><i class="fas fa-users"></i> Turma Manhã 2024</span>
+                    </div>
+                </div>
+                <div class="column sidebar-column">
+                    <div class="sidebar-box">
+                        <h3>Últimas Novidades</h3>
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <span class="news-date">Hoje</span>
+                                <span class="news-title">Novo vídeo sobre programação</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-date">Ontem</span>
+                                <span class="news-title">Projeto final em andamento</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-date">2 dias</span>
+                                <span class="news-title">Workshop de JavaScript</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Course Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2 class="section-title">Sobre o Curso</h2>
+                <div class="ornamental-divider"></div>
+            </div>
+            <div class="newspaper-columns">
+                <div class="column">
+                    <div class="course-info-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Análise e Desenvolvimento de Sistemas</h3>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <strong>Turno:</strong> Manhã
+                            </div>
+                            <div class="detail-item">
+                                <strong>Duração:</strong> 5 Semestres
+                            </div>
+                            <div class="detail-item">
+                                <strong>Modalidade:</strong> Presencial
+                            </div>
+                            <div class="detail-item">
+                                <strong>Área:</strong> Tecnologia da Informação
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="course-description">
+                        <p>
+                            O curso de Análise e Desenvolvimento de Sistemas forma profissionais capacitados 
+                            para analisar, projetar, desenvolver, testar, implantar e manter sistemas computacionais.
+                        </p>
+                        <p>
+                            Durante nossa jornada no turno da manhã, exploramos tecnologias modernas, 
+                            metodologias ágeis e as melhores práticas do desenvolvimento de software.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creators Section -->
+        <section id="creators" class="creators-section">
+            <div class="section-header">
+                <h2 class="section-title">Conheça as Criadoras</h2>
+                <div class="ornamental-divider"></div>
+            </div>
+            <div class="creators-grid" id="creators-grid">
+                <!-- Creators will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Vlog Section -->
+        <section id="vlog" class="vlog-section">
+            <div class="section-header">
+                <h2 class="section-title">Nosso Vlog</h2>
+                <div class="ornamental-divider"></div>
+            </div>
+            <div class="vlog-content">
+                <div class="vlog-intro">
+                    <p>
+                        Acompanhe nossa jornada acadêmica através de vídeos, documentando experiências, 
+                        aprendizados e projetos desenvolvidos durante o curso.
+                    </p>
+                </div>
+                <div class="social-buttons">
+                    <a href="#" class="social-btn youtube-btn" id="youtube-btn">
+                        <i class="fab fa-youtube"></i>
+                        <span>Nosso Canal</span>
+                    </a>
+                    <a href="#" class="social-btn instagram-btn" id="instagram-btn">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram da Escola</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="ornamental-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Quer saber mais sobre nosso projeto ou curso? Entre em contato conosco!</p>
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@vlogvintage.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-school"></i>
+                            <span>Análise e Desenvolvimento de Sistemas</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Turno Manhã</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="vintage-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Vlog Vintage</h4>
+                <p>Documentando nossa jornada acadêmica em Análise e Desenvolvimento de Sistemas.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre o Curso</a></li>
+                    <li><a href="#creators">Criadoras</a></li>
+                    <li><a href="#vlog">Vlog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vlog Vintage - Projeto Escolar ADS Turno Manhã</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
