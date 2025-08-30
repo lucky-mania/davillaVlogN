@@ -1,67 +1,99 @@
+<!--
+    VLOG VINTAGE - PÁGINA PRINCIPAL
+    Projeto escolar para curso de Análise e Desenvolvimento de Sistemas
+    Turno: Manhã - 2° ano do ensino médio
+    Criadoras: Davilla e Erica
+    Tema: Jornal vintage com layout responsivo
+-->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"> <!-- Define idioma como português brasileiro -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlog Vintage - Análise e Desenvolvimento de Sistemas</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Metadados da página -->
+    <meta charset="UTF-8">  <!-- Codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Responsividade -->
+    <title>Vlog Vintage - Análise e Desenvolvimento de Sistemas</title>  <!-- Título da aba -->
+    
+    <!-- Arquivos de estilo -->
+    <link rel="stylesheet" href="styles.css">  <!-- CSS principal do projeto -->
+    <!-- Fontes do Google (Playfair Display para títulos, Crimson Text para texto) -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Ícones do Font Awesome para redes sociais e elementos visuais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header with vintage newspaper masthead -->
+    <!-- CABEÇALHO ESTILO JORNAL VINTAGE -->
     <header class="newspaper-header">
+        <!-- Decoração superior -->
         <div class="header-decoration">
-            <div class="ornament-line"></div>
+            <div class="ornament-line"></div>  <!-- Linha decorativa com símbolos -->
         </div>
+        
+        <!-- Título principal do site -->
         <h1 class="masthead">VLOG VINTAGE</h1>
+        
+        <!-- Subtítulo com informações do curso -->
         <div class="subtitle">Análise e Desenvolvimento de Sistemas - Turno Manhã</div>
+        
+        <!-- Linha com data atual e edição -->
         <div class="date-line">
-            <span class="date" id="current-date"></span>
-            <span class="edition">Edição Digital</span>
+            <span class="date" id="current-date"></span>  <!-- Data preenchida via JavaScript -->
+            <span class="edition">Edição Digital</span>      <!-- Texto fixo -->
         </div>
+        
+        <!-- Decoração inferior -->
         <div class="header-decoration">
-            <div class="ornament-line"></div>
+            <div class="ornament-line"></div>  <!-- Linha decorativa com símbolos -->
         </div>
     </header>
 
-    <!-- Navigation -->
+    <!-- MENU DE NAVEGAÇÃO RESPONSIVO -->
     <nav class="vintage-nav">
         <div class="nav-container">
+            <!-- Botão hambúrguer para menu mobile -->
             <button class="nav-toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>  <!-- Ícone de hambúrguer -->
             </button>
+            
+            <!-- Menu principal -->
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Início</a></li>
-                <li><a href="#about" class="nav-link">Sobre o Curso</a></li>
-                <li><a href="#creators" class="nav-link">Criadoras</a></li>
-                <li><a href="#vlog" class="nav-link">Vlog</a></li>
-                <li><a href="#contact" class="nav-link">Contato</a></li>
+                <li><a href="#home" class="nav-link">Início</a></li>           <!-- Link para seção inicial -->
+                <li><a href="#about" class="nav-link">Sobre o Curso</a></li>   <!-- Link para informações do curso -->
+                <li><a href="#creators" class="nav-link">Criadoras</a></li>     <!-- Link para seção das criadoras -->
+                <li><a href="#vlog" class="nav-link">Vlog</a></li>             <!-- Link para seção do vlog -->
             </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- CONTEÚDO PRINCIPAL -->
     <main class="main-content">
-        <!-- Hero Section -->
+        <!-- SEÇÃO INICIAL (HERO) -->
         <section id="home" class="hero-section">
+            <!-- Layout em colunas estilo jornal -->
             <div class="newspaper-columns">
+                <!-- Coluna principal com conteúdo destaque -->
                 <div class="column main-column">
+                    <!-- Título principal com animação fade-in -->
                     <h2 class="headline fade-in">Bem-vindos ao Nosso Vlog Digital</h2>
+                    <!-- Assinatura do artigo -->
                     <div class="byline">Por: As Estudantes de ADS - Turno Manhã</div>
+                    <!-- Parágrafo principal com animação slide-up -->
                     <p class="lead-paragraph slide-up">
                         Mergulhe em nossa jornada acadêmica através deste vlog inspirado nos clássicos jornais vintage. 
                         Aqui documentamos nossa experiência no curso de Análise e Desenvolvimento de Sistemas, 
                         compartilhando conhecimentos, descobertas e momentos especiais da nossa formação.
                     </p>
+                    <!-- Metadados do artigo -->
                     <div class="article-meta">
                         <span class="meta-item"><i class="fas fa-clock"></i> Atualizado diariamente</span>
                         <span class="meta-item"><i class="fas fa-users"></i> Turma Manhã 2024</span>
                     </div>
                 </div>
+                
+                <!-- Coluna lateral com notícias -->
                 <div class="column sidebar-column">
                     <div class="sidebar-box">
                         <h3>Últimas Novidades</h3>
+                        <!-- Lista de notícias recentes -->
                         <ul class="news-list">
                             <li class="news-item">
                                 <span class="news-date">Hoje</span>
@@ -81,22 +113,29 @@
             </div>
         </section>
 
-        <!-- About Course Section -->
+        <!-- SEÇÃO SOBRE O CURSO -->
         <section id="about" class="about-section">
+            <!-- Cabeçalho da seção -->
             <div class="section-header">
                 <h2 class="section-title">Sobre o Curso</h2>
-                <div class="ornamental-divider"></div>
+                <div class="ornamental-divider"></div>  <!-- Divisor decorativo -->
             </div>
+            
+            <!-- Layout em colunas para informações do curso -->
             <div class="newspaper-columns">
+                <!-- Coluna com detalhes do curso -->
                 <div class="column">
                     <div class="course-info-card">
+                        <!-- Título do curso com ícone -->
                         <h3><i class="fas fa-graduation-cap"></i> Análise e Desenvolvimento de Sistemas</h3>
+                        
+                        <!-- Detalhes organizados em cards -->
                         <div class="course-details">
                             <div class="detail-item">
                                 <strong>Turno:</strong> Manhã
                             </div>
                             <div class="detail-item">
-                                <strong>Duração:</strong> 5 Semestres
+                                <strong>Ano:</strong> 2° ano do ensino médio
                             </div>
                             <div class="detail-item">
                                 <strong>Modalidade:</strong> Presencial
@@ -107,6 +146,8 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Coluna com descrição do curso -->
                 <div class="column">
                     <div class="course-description">
                         <p>
@@ -122,100 +163,127 @@
             </div>
         </section>
 
-        <!-- Creators Section -->
+        <!-- Creators Section / Seção das Criadoras -->
         <section id="creators" class="creators-section">
             <div class="section-header">
                 <h2 class="section-title">Conheça as Criadoras</h2>
                 <div class="ornamental-divider"></div>
             </div>
-            <div class="creators-grid" id="creators-grid">
-                <!-- Creators will be dynamically loaded here -->
+            <!-- Container para a foto das criadoras com links para seus Instagrams -->
+            <div class="creators-photo-container">
+                <div class="creators-photo-wrapper">
+                    <!-- Foto principal das criadoras -->
+                    <img src="criadoras.jpg" alt="Davilla e Erica - Criadoras do Vlog Vintage" class="creators-photo">
+                    
+                    <!-- Overlay com links para os Instagrams individuais -->
+                    <div class="creators-overlay">
+                        <!-- Link para Instagram da Davilla (garota da esquerda) -->
+                        <a href="https://www.instagram.com/davilla/" target="_blank" class="creator-link left-creator" title="Instagram da Davilla">
+                            <div class="creator-info">
+                                <i class="fab fa-instagram"></i>
+                                <span>@davilla</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Link para Instagram da Erica (garota da direita) -->
+                        <a href="https://www.instagram.com/erica/" target="_blank" class="creator-link right-creator" title="Instagram da Erica">
+                            <div class="creator-info">
+                                <i class="fab fa-instagram"></i>
+                                <span>@erica</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Legenda da foto -->
+                <div class="photo-caption">
+                    <p>Davilla e Erica - As criadoras do Vlog Vintage</p>
+                    <p class="caption-subtitle">Estudantes do 2° ano - Turno Manhã</p>
+                </div>
             </div>
         </section>
 
-        <!-- Vlog Section -->
+        <!-- SEÇÃO DO VLOG -->
         <section id="vlog" class="vlog-section">
+            <!-- Cabeçalho da seção -->
             <div class="section-header">
                 <h2 class="section-title">Nosso Vlog</h2>
-                <div class="ornamental-divider"></div>
+                <div class="ornamental-divider"></div>  <!-- Divisor decorativo -->
             </div>
+            
+            <!-- Conteúdo da seção vlog -->
             <div class="vlog-content">
+                <!-- Introdução explicativa -->
                 <div class="vlog-intro">
                     <p>
                         Acompanhe nossa jornada acadêmica através de vídeos, documentando experiências, 
                         aprendizados e projetos desenvolvidos durante o curso.
                     </p>
                 </div>
+                
+                <!-- Botões para redes sociais -->
                 <div class="social-buttons">
-                    <a href="#" class="social-btn youtube-btn" id="youtube-btn">
-                        <i class="fab fa-youtube"></i>
+                    <!-- Botão do YouTube (link direto para o canal) -->
+                    <a href="https://www.youtube.com/@D1nastia" target="_blank" class="social-btn youtube-btn" id="youtube-btn">
+                        <i class="fab fa-youtube"></i>  <!-- Ícone do YouTube -->
                         <span>Nosso Canal</span>
                     </a>
-                    <a href="#" class="social-btn instagram-btn" id="instagram-btn">
-                        <i class="fab fa-instagram"></i>
+                    
+                    <!-- Botão do Instagram da escola (link direto) -->
+                    <a href="https://www.instagram.com/ceepleonardodasdores/" target="_blank" class="social-btn instagram-btn" id="instagram-btn">
+                        <i class="fab fa-instagram"></i>  <!-- Ícone do Instagram -->
                         <span>Instagram da Escola</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="section-header">
-                <h2 class="section-title">Entre em Contato</h2>
-                <div class="ornamental-divider"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>Quer saber mais sobre nosso projeto ou curso? Entre em contato conosco!</p>
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>contato@vlogvintage.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-school"></i>
-                            <span>Análise e Desenvolvimento de Sistemas</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Turno Manhã</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
+    <!-- RODAPÉ -->
     <footer class="vintage-footer">
+        <!-- Conteúdo principal do rodapé -->
         <div class="footer-content">
+            <!-- Seção: Informações do projeto -->
             <div class="footer-section">
                 <h4>Vlog Vintage</h4>
                 <p>Documentando nossa jornada acadêmica em Análise e Desenvolvimento de Sistemas.</p>
             </div>
+            
+            <!-- Seção: Links rápidos para navegação -->
             <div class="footer-section">
                 <h4>Links Rápidos</h4>
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#about">Sobre o Curso</a></li>
-                    <li><a href="#creators">Criadoras</a></li>
-                    <li><a href="#vlog">Vlog</a></li>
+                    <li><a href="#home">Início</a></li>           <!-- Link para início -->
+                    <li><a href="#about">Sobre o Curso</a></li>   <!-- Link para curso -->
+                    <li><a href="#creators">Criadoras</a></li>     <!-- Link para criadoras -->
+                    <li><a href="#vlog">Vlog</a></li>             <!-- Link para vlog -->
                 </ul>
             </div>
+            
+            <!-- Seção: Redes sociais -->
             <div class="footer-section">
                 <h4>Redes Sociais</h4>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <!-- Link direto para YouTube -->
+                    <a href="https://www.youtube.com/@D1nastia" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <!-- Link direto para Instagram da escola -->
+                    <a href="https://www.instagram.com/ceepleonardodasdores/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </div>
+        
+        <!-- Linha inferior com copyright -->
         <div class="footer-bottom">
             <p>&copy; 2024 Vlog Vintage - Projeto Escolar ADS Turno Manhã</p>
         </div>
     </footer>
 
+    <!-- Script JavaScript principal -->
     <script src="script.js"></script>
 </body>
 </html>

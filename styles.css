@@ -1,58 +1,73 @@
-/* Reset and Base Styles */
+/*
+ * VLOG VINTAGE - ESTILOS CSS PRINCIPAL
+ * Projeto escolar para curso de Análise e Desenvolvimento de Sistemas
+ * Turno: Manhã - 2° ano do ensino médio
+ * Criadoras: Davilla e Erica
+ * Tema: Jornal vintage responsivo
+ */
+
+/* RESET E ESTILOS BASE */
+/* Remove margens e paddings padrão dos navegadores */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;  /* Inclui border e padding no cálculo do tamanho */
 }
 
+/* VARIÁVEIS CSS GLOBAIS */
+/* Centraliza todas as cores, fontes e medidas para fácil manutenção */
 :root {
-    /* Vintage Color Palette */
-    --primary-color: #8B4513;
-    --secondary-color: #D2B48C;
-    --accent-color: #CD853F;
-    --text-color: #2F1B14;
-    --background-color: #FDF5E6;
-    --paper-color: #F5F5DC;
-    --border-color: #8B7355;
-    --shadow-color: rgba(139, 69, 19, 0.2);
+    /* Paleta de cores vintage (tons terrosos) */
+    --primary-color: #8B4513;    /* Marrom principal */
+    --secondary-color: #D2B48C;  /* Bege claro */
+    --accent-color: #CD853F;     /* Marrom médio (destaque) */
+    --text-color: #2F1B14;       /* Marrom escuro (texto) */
+    --background-color: #FDF5E6; /* Creme (fundo) */
+    --paper-color: #F5F5DC;      /* Bege (papel) */
+    --border-color: #8B7355;     /* Marrom para bordas */
+    --shadow-color: rgba(139, 69, 19, 0.2); /* Sombra semi-transparente */
     
-    /* Typography */
-    --heading-font: 'Playfair Display', serif;
-    --body-font: 'Crimson Text', serif;
+    /* Fontes tipográficas */
+    --heading-font: 'Playfair Display', serif;  /* Fonte para títulos (elegante) */
+    --body-font: 'Crimson Text', serif;         /* Fonte para textos (legível) */
     
-    /* Spacing */
-    --section-padding: 4rem 2rem;
-    --container-max-width: 1200px;
+    /* Espaçamentos padrão */
+    --section-padding: 4rem 2rem;    /* Padding das seções */
+    --container-max-width: 1200px;   /* Largura máxima do conteúdo */
 }
 
+/* ESTILO DO CORPO DA PÁGINA */
 body {
-    font-family: var(--body-font);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    overflow-x: hidden;
+    font-family: var(--body-font);           /* Aplica fonte principal */
+    background-color: var(--background-color); /* Cor de fundo creme */
+    color: var(--text-color);                 /* Cor do texto marrom escuro */
+    line-height: 1.6;                        /* Altura da linha para legibilidade */
+    overflow-x: hidden;                      /* Esconde scroll horizontal */
 }
 
-/* Typography */
+/* TIPOGRAFIA GERAL */
+/* Estilos para todos os títulos */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-family: var(--heading-font);  /* Fonte elegante para títulos */
+    font-weight: 700;                  /* Peso da fonte (negrito) */
+    margin-bottom: 1rem;               /* Espaço abaixo dos títulos */
 }
 
+/* Estilo dos parágrafos */
 p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    margin-bottom: 1rem;  /* Espaço entre parágrafos */
+    font-size: 1.1rem;    /* Tamanho ligeiramente maior para legibilidade */
 }
 
-/* Header Styles */
+/* ESTILOS DO CABEÇALHO */
+/* Cabeçalho principal com visual de jornal vintage */
 .newspaper-header {
-    background: linear-gradient(135deg, var(--paper-color), var(--background-color));
-    border-bottom: 3px solid var(--border-color);
-    padding: 2rem 1rem;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    background: linear-gradient(135deg, var(--paper-color), var(--background-color)); /* Gradiente de fundo */
+    border-bottom: 3px solid var(--border-color); /* Borda inferior */
+    padding: 2rem 1rem;                           /* Espaçamento interno */
+    text-align: center;                           /* Centraliza conteúdo */
+    position: relative;                           /* Para posicionamento de elementos filhos */
+    box-shadow: 0 4px 8px var(--shadow-color);   /* Sombra sutil */
 }
 
 .header-decoration {
@@ -111,13 +126,14 @@ p {
     color: var(--text-color);
 }
 
-/* Navigation */
+/* MENU DE NAVEGAÇÃO */
+/* Menu principal que fica fixo no topo ao rolar */
 .vintage-nav {
-    background-color: var(--primary-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px var(--shadow-color);
+    background-color: var(--primary-color);    /* Cor de fundo marrom */
+    position: sticky;                          /* Fica fixo no topo ao rolar */
+    top: 0;                                    /* Posicionado no topo */
+    z-index: 100;                             /* Fica acima de outros elementos */
+    box-shadow: 0 2px 10px var(--shadow-color); /* Sombra para dar profundidade */
 }
 
 .nav-container {
@@ -183,21 +199,24 @@ p {
     padding: 0 1rem;
 }
 
-/* Section Styles */
+/* ESTILOS DAS SEÇÕES */
+/* Estilo geral aplicado a todas as seções da página */
 section {
-    padding: var(--section-padding);
-    margin-bottom: 2rem;
+    padding: var(--section-padding);  /* Espaçamento interno definido na variável */
+    margin-bottom: 2rem;              /* Espaço entre seções */
 }
 
+/* Cabeçalho padrão das seções */
 .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
+    text-align: center;     /* Centraliza títulos */
+    margin-bottom: 3rem;    /* Espaço abaixo do cabeçalho */
 }
 
+/* Títulos das seções com tamanho responsivo */
 .section-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);  /* Tamanho responsívo: min 2rem, max 3rem */
+    color: var(--primary-color);        /* Cor marrom principal */
+    margin-bottom: 1rem;                /* Espaço abaixo do título */
 }
 
 .ornamental-divider {
@@ -225,25 +244,29 @@ section {
     right: -15px;
 }
 
-/* Newspaper Layout */
+/* LAYOUT ESTILO JORNAL */
+/* Sistema de colunas inspirado em jornais impressos */
 .newspaper-columns {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin-bottom: 2rem;
+    display: grid;                        /* Layout em grid */
+    grid-template-columns: 2fr 1fr;      /* Coluna principal (2/3) + sidebar (1/3) */
+    gap: 3rem;                           /* Espaço entre colunas */
+    margin-bottom: 2rem;                 /* Espaço abaixo do layout */
 }
 
+/* Estilo base das colunas */
 .column {
-    position: relative;
+    position: relative;  /* Para posicionamento de elementos filhos */
 }
 
+/* Coluna principal (conteúdo) */
 .main-column {
-    padding-right: 2rem;
-    border-right: 2px solid var(--border-color);
+    padding-right: 2rem;                     /* Espaço à direita */
+    border-right: 2px solid var(--border-color); /* Linha divisoria vertical */
 }
 
+/* Coluna lateral (sidebar) */
 .sidebar-column {
-    padding-left: 1rem;
+    padding-left: 1rem;  /* Espaço à esquerda */
 }
 
 /* Hero Section */
@@ -389,77 +412,131 @@ section {
     text-align: justify;
 }
 
-/* Creators Section */
-.creators-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.creator-card {
-    background: linear-gradient(135deg, var(--paper-color), white);
-    border: 2px solid var(--border-color);
-    border-radius: 15px;
-    padding: 2rem;
+/* Creators Section / Seção das Criadoras */
+/* Container principal para a foto das criadoras */
+.creators-photo-container {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    box-shadow: 0 8px 20px var(--shadow-color);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-.creator-card::before {
-    content: '';
+/* Wrapper da foto com efeitos hover */
+.creators-photo-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover no wrapper da foto */
+.creators-photo-wrapper:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+/* Estilo da foto principal */
+.creators-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    border: 4px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+/* Overlay invisível que aparece no hover */
+.creators-overlay {
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.6s ease;
-}
-
-.creator-card:hover::before {
-    left: 100%;
-}
-
-.creator-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px var(--shadow-color);
-}
-
-.creator-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid var(--accent-color);
-    margin: 0 auto 1rem;
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.8), rgba(205, 133, 63, 0.8));
+    opacity: 0;
+    transition: opacity 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: white;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+/* Mostrar overlay no hover */
+.creators-photo-wrapper:hover .creators-overlay {
+    opacity: 1;
+}
+
+/* Links das criadoras (esquerda e direita) */
+.creator-link {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+/* Animação dos links quando overlay aparece */
+.creators-photo-wrapper:hover .creator-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Posicionamento específico para cada criadora */
+.left-creator {
+    margin-right: auto;
+}
+
+.right-creator {
+    margin-left: auto;
+}
+
+/* Hover nos links individuais */
+.creator-link:hover {
+    background: white;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Estilo das informações dentro dos links */
+.creator-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.creator-info i {
+    font-size: 1.5rem;
+    color: #E4405F; /* Cor do Instagram */
+}
+
+/* Legenda da foto */
+.photo-caption {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--paper-color), white);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
     box-shadow: 0 4px 15px var(--shadow-color);
 }
 
-.creator-name {
+.photo-caption p {
+    font-size: 1.2rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    font-size: 1.3rem;
+    font-weight: 600;
 }
 
-.creator-role {
-    color: var(--accent-color);
+.caption-subtitle {
+    font-size: 1rem !important;
+    color: var(--accent-color) !important;
     font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.creator-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-color);
+    margin-bottom: 0 !important;
 }
 
 /* Social Buttons */
@@ -550,55 +627,6 @@ section {
     margin: 0 auto;
 }
 
-/* Contact Section */
-.contact-content {
-    text-align: center;
-    background: linear-gradient(135deg, var(--paper-color), white);
-    border: 2px solid var(--border-color);
-    border-radius: 15px;
-    padding: 3rem 2rem;
-    box-shadow: 0 8px 20px var(--shadow-color);
-}
-
-.contact-info p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: var(--text-color);
-}
-
-.contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    background-color: var(--background-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.contact-item:hover {
-    background-color: var(--accent-color);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.contact-item i {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-}
-
-.contact-item:hover i {
-    color: white;
-}
 
 /* Footer */
 .vintage-footer {
@@ -670,91 +698,104 @@ section {
     opacity: 0.8;
 }
 
-/* Animations */
+/* ANIMAÇÕES CSS */
+/* Animação de entrada suave (fade-in) */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(30px);
+        opacity: 0;                    /* Começa transparente */
+        transform: translateY(30px);   /* Começa 30px abaixo */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1;                  /* Termina opaco */
+        transform: translateY(0);    /* Termina na posição normal */
     }
 }
 
+/* Animação de deslizar para cima */
 @keyframes slideUp {
     from {
-        opacity: 0;
-        transform: translateY(50px);
+        opacity: 0;                    /* Começa transparente */
+        transform: translateY(50px);   /* Começa 50px abaixo */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1;                  /* Termina opaco */
+        transform: translateY(0);    /* Termina na posição normal */
     }
 }
 
+/* Animação de pulsação (usado no easter egg) */
 @keyframes pulse {
     0%, 100% {
-        transform: scale(1);
+        transform: scale(1);      /* Tamanho normal */
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(1.05);   /* Aumenta 5% */
     }
 }
 
+/* Classes para aplicar as animações */
 .fade-in {
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn 1s ease-out;           /* Aplica fade-in em 1 segundo */
 }
 
 .slide-up {
-    animation: slideUp 1s ease-out 0.3s both;
+    animation: slideUp 1s ease-out 0.3s both; /* Aplica slide-up com delay de 0.3s */
 }
 
-/* Responsive Design */
+/* DESIGN RESPONSIVO */
+/* Estilos para tablets e celulares (telas menores que 768px) */
 @media (max-width: 768px) {
+    /* Reduz padding das seções em telas menores */
     :root {
-        --section-padding: 2rem 1rem;
+        --section-padding: 2rem 1rem;  /* Menos espaçamento lateral */
     }
     
+    /* Mostra botão hambúrguer em telas menores */
     .nav-toggle {
         display: block;
     }
     
+    /* Menu mobile: esconde lateralmente e mostra quando ativo */
     .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-color);
-        flex-direction: column;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
+        position: absolute;                      /* Posicionamento absoluto */
+        top: 100%;                              /* Abaixo do botão */
+        left: 0;                                /* Alinhado à esquerda */
+        width: 100%;                            /* Largura total */
+        background-color: var(--primary-color); /* Mesma cor do menu desktop */
+        flex-direction: column;                 /* Itens em coluna */
+        transform: translateX(-100%);           /* Escondido para a esquerda */
+        transition: transform 0.3s ease;       /* Transição suave */
     }
     
+    /* Menu ativo: desliza para dentro */
     .nav-menu.active {
-        transform: translateX(0);
+        transform: translateX(0);  /* Mostra o menu */
     }
     
+    /* Links do menu mobile */
     .nav-link {
-        padding: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem;                                      /* Maior área de toque */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador entre links */
     }
     
+    /* Layout de colunas vira layout único em mobile */
     .newspaper-columns {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: 1fr;  /* Uma coluna só */
+        gap: 2rem;                   /* Espaço entre seções empilhadas */
     }
     
+    /* Coluna principal em mobile */
     .main-column {
-        padding-right: 0;
-        border-right: none;
-        border-bottom: 2px solid var(--border-color);
-        padding-bottom: 2rem;
-        margin-bottom: 1rem;
+        padding-right: 0;                            /* Remove padding lateral */
+        border-right: none;                          /* Remove borda lateral */
+        border-bottom: 2px solid var(--border-color); /* Adiciona borda inferior */
+        padding-bottom: 2rem;                       /* Espaço interno inferior */
+        margin-bottom: 1rem;                        /* Espaço externo inferior */
     }
     
+    /* Sidebar em mobile */
     .sidebar-column {
-        padding-left: 0;
+        padding-left: 0;  /* Remove padding lateral */
     }
     
     .social-buttons {
@@ -774,8 +815,20 @@ section {
         gap: 1rem;
     }
     
-    .contact-methods {
-        grid-template-columns: 1fr;
+    /* Responsividade para a seção de criadoras */
+    .creators-photo {
+        max-width: 100%;
+    }
+    
+    .creators-overlay {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .creator-link {
+        width: 100%;
+        margin: 0 !important;
     }
     
     .date-line {
@@ -785,18 +838,16 @@ section {
 }
 
 @media (max-width: 480px) {
-    .creators-grid {
-        grid-template-columns: 1fr;
+    /* RESPONSIVIDADE PARA CELULARES (telas muito pequenas) */
+    
+    /* Container da foto das criadoras */
+    .creators-photo-container {
+        padding: 0 1rem;  /* Adiciona padding lateral para evitar cortes */
     }
     
-    .creator-card {
-        padding: 1.5rem;
-    }
-    
-    .creator-avatar {
-        width: 100px;
-        height: 100px;
-        font-size: 2.5rem;
+    /* Legenda da foto */
+    .photo-caption {
+        padding: 1rem;  /* Reduz padding interno */
     }
     
     .social-btn {
@@ -809,25 +860,28 @@ section {
     }
 }
 
-/* Smooth scrolling */
+/* SCROLL SUAVE */
+/* Ativa scroll suave nativo do navegador para todos os links internos */
 html {
     scroll-behavior: smooth;
 }
 
-/* Loading animation for dynamic content */
+/* ANIMAÇÃO DE CARREGAMENTO */
+/* Círculo que gira para indicar carregamento */
 .loading {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid var(--secondary-color);
-    border-radius: 50%;
-    border-top-color: var(--primary-color);
-    animation: spin 1s ease-in-out infinite;
+    display: inline-block;                    /* Exibe em linha */
+    width: 20px;                             /* Largura do círculo */
+    height: 20px;                            /* Altura do círculo */
+    border: 3px solid var(--secondary-color); /* Borda bege */
+    border-radius: 50%;                      /* Torna circular */
+    border-top-color: var(--primary-color);  /* Topo marrom (cria o efeito) */
+    animation: spin 1s ease-in-out infinite;  /* Gira infinitamente */
 }
 
+/* Animação de rotação */
 @keyframes spin {
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg);  /* Gira 360 graus */
     }
 }
 
@@ -841,23 +895,28 @@ html {
     transform: scale(1.02);
 }
 
-/* Print styles */
+/* ESTILOS PARA IMPRESSÃO */
+/* Otimização para quando o usuário imprimir a página */
 @media print {
+    /* Esconde elementos que não são úteis na impressão */
     .vintage-nav,
     .social-buttons,
     .nav-toggle {
-        display: none !important;
+        display: none !important;  /* Força esconder estes elementos */
     }
     
+    /* Cores otimizadas para impressão em preto e branco */
     body {
-        background: white;
-        color: black;
+        background: white;  /* Fundo branco */
+        color: black;       /* Texto preto */
     }
     
+    /* Cabeçalho com borda preta */
     .newspaper-header {
         border-bottom: 2px solid black;
     }
     
+    /* Evita quebrar seções no meio da página */
     section {
         page-break-inside: avoid;
     }
